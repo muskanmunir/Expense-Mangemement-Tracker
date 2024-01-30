@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    /* background-color: #FFF5E0; */
+
+  }
+   html,
+   body {
+     width: 100%;
+     height: 100%;
+  background-color: rgb(245, 239, 233);
+
+  }
+
+ /* Styles for the expense creation form and profile section */
+
+.expenses-profile {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .details, .profile {
+    flex: 1;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  input,
+  select,
+  button {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  select {
+    width: 100%;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  

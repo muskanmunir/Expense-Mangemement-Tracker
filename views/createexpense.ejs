@@ -1,0 +1,39 @@
+<%- include("header")%>
+<%- include("nav.ejs")%>
+<link rel="stylesheet" href="stylesheets/createexpense.css">
+<div class="expenses-profile">
+    <div class="details">
+        <h2>Add Expense Details</h2> <br>
+        <p>Enter the information below to add a new expense:</p>
+        <form action="/createexpense" method="POST">
+            
+           
+            <select name="category" >
+                <option value="utilities">Utilies (Electricity, Water, Gas)</option>
+                <option value="rent">Rent</option>
+                <option value="food">Food</option>
+                <option value="shopping">Shopping</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="travel">travel</option>
+                <option value="miscellaneous">Miscellaneous</option>
+                <option value="shopping">Shopping</option>
+                <option value="transportation">Transportation(Fuel, Public, Transport)</option>
+            </select>
+            <input type="text" name="remark" placeholder="Remark" />
+            <input type="number" name="amount" placeholder="Enter Amount" />
+            <select name="paymentmode">
+                <option value="cash">Cash</option>
+                <option value="online">Online</option>
+                <option value="cheque">Cheque</option>
+            </select><br><br>
+            <button>Add Expense</button>
+        </form>
+    </div>
+    <div class="profile">
+        <h2>Expense Profile</h2> <br>
+        <p>View your expense profile and track your spending: </p>
+        <!-- Add content related to expense profile -->
+    </div>
+</div>
+
+<%- include("footer")%>

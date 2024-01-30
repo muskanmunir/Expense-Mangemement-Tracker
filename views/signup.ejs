@@ -1,0 +1,37 @@
+<%- include('header.ejs')%>
+<%- include("nav.ejs")%>
+<link rel="stylesheet" href="stylesheets/signup.css">
+ <div class="signup">
+  <div class="div">
+    <h1>Create Your Account</h1> <br>
+    <h3>Username or Email Enter Here!</h3>
+  </div>
+  <div class="putii">
+    <form action="/signup" method="post">
+      <h2>
+       UserName: <input type="text" name="username" placeholder="username" /> <br>
+      </h2>
+      
+      <h2>
+        Email:<input type="email" name="email" placeholder="email" /> <br>
+      </h2>
+      
+      <h2>
+       Password: <input type="password" name="password" placeholder="password" /> <br>
+      </h2>
+      
+      <button>SIGNUP</button>
+      <!-- <a href="/">SIGNIN</a> -->
+      
+    </form>
+  </div>
+ 
+    <div class="read">
+      <h3>By continuing, you agree to tracker expenses Conditions of Use and Privacy Notice.</h3>
+      <p>Need help</p>
+    </div>
+    <a href="/"><i class="ri-arrow-left-circle-fill"></i></a>
+ </div>
+
+
+<%- include('footer.ejs')%>

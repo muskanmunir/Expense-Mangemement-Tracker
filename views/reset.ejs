@@ -1,0 +1,24 @@
+<%- include("header.ejs") %>
+<%- include("nav.ejs")%>
+<link rel="stylesheet" href="stylesheets/reset.css">
+<div class="main1">   
+  <div class="boxs">
+    <h1>Reset your password </h1> <br> 
+    <p>create new password</p> <br>
+    <div class="lulu">
+      <form action="/reset" method="post">
+        <h3>Old password:<input  type="password" placeholder="Old password" name="oldpassword"></h3>
+         <br><br>
+         <h3>New password:<input type="password" placeholder="New password" name="newpassword"> <br><br></h3>
+        
+    </div>
+    
+      <button>Reset Password</button> <br><br>
+   </form> 
+   <a href="/"><i class="ri-arrow-left-circle-fill"></i></a>
+  </div>
+  
+</div>
+
+
+<%- include("footer.ejs") %>

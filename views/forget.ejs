@@ -1,0 +1,14 @@
+<%- include("header.ejs")%>
+<%- include("nav.ejs")%>
+
+<!--  -->
+<h1>Find Your Account</h1>
+<h3>Please enter your email address or mobile number to search for your account.</h3>
+<!--  -->
+<form action="/forget" method="post">
+    <input type="text" name="username" placeholder="username">
+    <input type="password" name="newpassword" placeholder="New Password">
+    <button>Forget Password</button>
+</form>
+<!--  -->
+<%- include("footer.ejs")%>

@@ -1,0 +1,90 @@
+<%- include("header.ejs")%>
+<%- include("nav.ejs")%>
+<link rel="stylesheet" href="stylesheets/profile.css">
+    <div class="profilimg">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet">
+        <div class="pics">
+            
+            <div class="right">
+                <img src="https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_9daa96814db614bc8ff7b867d5de6184/expensya-expensya.png" alt="">
+            </div>
+                <div class="love">
+                    <button><a href="/signout">logout</a></button> <br>
+                    <button><a href="/reset">Reset Password</a></button>
+                </div>
+        </div>
+        <div class="cre">
+            <h1>👋hello <span>
+                <%= admin.username %>
+            </span> welcome to expense tracker app
+           </h1> <br>
+           <p>Track your daily expenses here</p>
+           <a href="/createexpense">Add new expenses</a>
+        </div>
+
+        
+    
+        <div class="filter">
+            <form action="/filter">
+                <select name="key" id="">
+                    <option value="amount">Amount</option>
+                    <option value="remark">Remark</option>
+                    <option value="category">Category</option>
+                    <option value="paymentmode">Payment Mode</option>
+                    <option value="date">Date</option>
+                </select>
+                <input type="text" name="value" placeholder="Enter search term" />
+                <button>Filter <i class="ri-filter-3-line"></i></i></button>
+            </form>
+        </div>
+    
+       
+       <div class="main-card">
+        <br><br>
+            <table border="1">
+               <tr>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Catagory</th>
+                <th>Payment</th>
+                <th>Remark</th>
+                <th>delete / edit</th>
+             </tr>
+             <% expenses.forEach((e)=> { %>
+                <tr> 
+                    <td>
+                        <%= e.date %>
+                    </td>
+                    <td>
+                        <%= e.amount %>
+                    </td>
+                    <td>
+                        <%= e.category %>
+                    </td>
+                    <td>
+                        <%= e.paymentmode %>
+                    </td>
+                    <td>
+                        <%= e.remark %>
+                    </td>
+                    <td>
+                        <a class="delt" href="/delete/<%= e.id%>"><i class="ri-delete-bin-5-fill"></i></a>
+                        <a class="updte" href="/update/<%= e.id%>"><i class="ri-edit-line"></i></a>
+                    </td>
+                </tr>
+                <% }) %>
+            </table>
+            <div id="total">
+                Total Expense: <%= expenses.reduce((ac,cv)=> ac+cv.amount, 0)%>
+        
+            </div>
+        </div> 
+    
+        
+     </div>
+    
+
+<%- include("footer.ejs")%>
+
+</body>
+</html>

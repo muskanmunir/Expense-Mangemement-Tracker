@@ -1,0 +1,35 @@
+<%- include("header.ejs")%>
+
+<link rel="stylesheet" href="/stylesheets/update.css">
+
+
+<div class="list">
+    <div class="amu">
+        <h1>"Add your expenses effortlessly here."</h1>
+
+        <form action="/update/<%= data._id %>" method="post">
+            <label for="amount">Amount:</label>
+            <input value="<%= data.amount %>" type="number" name="amount" placeholder="Enter Amount" />
+
+            <label for="remark">Remark:</label>
+            <input value="<%= data.remark %>" type="text" name="remark" placeholder="Remark" />
+
+            <label for="category">Category:</label>
+            <input value="<%= data.category %>" type="text" name="category" placeholder="Category" />
+
+            <label for="paymentmode">Payment Mode:</label>
+            <select value="<%= data.paymentmode %>" name="paymentmode">
+                <option value="cash">Cash</option>
+                <option value="online">Online</option>
+                <option value="cheque">Cheque</option>
+            </select><br><br>
+            <br>
+            <button>Update</button> <br> <br>
+
+            <a href="/"><i class="ri-arrow-left-circle-fill"></i></a>
+        </form>
+    </div>
+</div>
+
+
+<%- include("footer.ejs")%>

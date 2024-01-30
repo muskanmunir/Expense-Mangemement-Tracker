@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  /* background-color: #FFF5E0; */
+background-color: rgb(245, 239, 233);
+
+
+}
+ html,
+ body {
+   width: 100%;
+   height: 100%;
+}
+/* Styles for the profile page */
+
+.profilimg {
+  font-family: 'Arial', sans-serif;
+  margin: 20px;
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  
+}
+
+.pics {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right img {
+  max-width: 100%;
+  height: auto;
+}
+
+.love {
+  text-align: center;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  
+}
+
+.love button {
+  background-color: #7e87a2;
+  color: rgb(114, 46, 46);
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+
+}
+.love  a{
+  background-color: #7e87a2;
+  text-decoration: none;
+  color: white;
+}
+
+.love button:hover {
+  background-color: #8cdab0;
+}
+
+.cre {
+  margin-top: 20px;
+}
+
+.cre h1 {
+  color: #333;
+}
+
+.cre span {
+  color: #4caf50;
+}
+
+.cre p {
+  color: #555;
+}
+
+.cre a {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.filter {
+  margin: 20px 0;
+}
+
+.filter select, .filter input, .filter button {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.filter select {
+  width: 150px;
+}
+
+.filter button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.filter button:hover {
+  background-color: #45a049;
+}
+
+.main-card {
+  margin-top: 20px;
+  text-transform: uppercase;
+  background-color: #9AE2FD;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.delt, .updte {
+  color: #2196f3;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.delt:hover, .updte:hover {
+  text-decoration: underline;
+}
+
+#total {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+}
